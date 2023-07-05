@@ -11,12 +11,24 @@
     conforme o caso.
     */
 
-    //ENTRADA
     
-    
-    //PROCESSAMENTO
+    const turno= prompt(`Informe o turno que você estuda:`).toUpperCase()
 
-    
-    //SAÍDA
+    switch (turno) {
+        case "MATUTINO":
+        alert("Bom dia!");
+        break;
+
+        case "VESPERTINO":
+            alert("Boa tarde")
+
+        case "NOTURNO":
+            alert ("Boa noite")
+
+            default:
+                alert ("Opção inválida");
+                break;
+
+        }
 
 </script>

@@ -4,12 +4,14 @@
     //PROBLEMA: Faça um script que peça um número inteiro e determine se ele é par ou ímpar.
     */
 
-    //ENTRADA
+    const numero = Number(prompt(`Informe um número:`))
 
-    
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
+    switch (numero % 2) {
+        case 0:
+            alert("É um número par!")
+            break;
+        default:
+            alert("É um número ímpar!")
+    }
 
 </script>
