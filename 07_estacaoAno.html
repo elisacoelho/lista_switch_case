@@ -5,12 +5,132 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+    const hemisferio = prompt("Em qual hemisfério você está?").toLowerCase();
+    const mes = prompt("Qual é o mês atual? (nome completo do mês)").toLowerCase();
 
-    
-    //PROCESSAMENTO
+    let estacao;
 
+    switch (hemisferio) {
+        case "norte":
+            switch (mes) {
+                case "dezembro":
+                case "janeiro":
+                case "fevereiro":
+                    estacao = "Inverno";
+                    break;
+                case "março":
+                case "abril":
+                case "maio":
+                    estacao = "Primavera";
+                    break;
+                case "junho":
+                case "julho":
+                case "agosto":
+                    estacao = "Verão";
+                    break;
+                case "setembro":
+                case "outubro":
+                case "novembro":
+                    estacao = "Outono";
+                    break;
+                default:
+                   alert("Mês inválido.");
+                    break;
+            }
+            break;
 
-    //SAÍDA
+        case "sul":
+            switch (mes) {
+                case "dezembro":
+                case "janeiro":
+                case "fevereiro":
+                    estacao = "Verão";
+                    break;
+                case "março":
+                case "abril":
+                case "maio":
+                    estacao = "Outono";
+                    break;
+                case "junho":
+                case "julho":
+                case "agosto":
+                    estacao = "Inverno";
+                    break;
+                case "setembro":
+                case "outubro":
+                case "novembro":
+                    estacao = "Primavera";
+                    break;
+                default:
+                   alert("Mês inválido.");
+                    break;
+            }
+            break;
+
+        case "leste":
+            switch (mes) {
+                case "março":
+                case "abril":
+                case "maio":
+                    estacao = "Outono";
+                    break;
+                case "junho":
+                case "julho":
+                case "agosto":
+                    estacao = "Inverno";
+                    break;
+                case "setembro":
+                case "outubro":
+                case "novembro":
+                    estacao = "Primavera";
+                    break;
+                case "dezembro":
+                case "janeiro":
+                case "fevereiro":
+                    estacao = "Verão";
+                    break;
+                default:
+                   alert("Mês inválido.");
+                    break;
+            }
+            break;
+
+        case "oeste":
+            switch (mes) {
+                case "março":
+                case "abril":
+                case "maio":
+                    estacao = "Primavera";
+                    break;
+                case "junho":
+                case "julho":
+                case "agosto":
+                    estacao = "Verão";
+                    break;
+                case "setembro":
+                case "outubro":
+                case "novembro":
+                    estacao = "Outono";
+                    break;
+                case "dezembro":
+                case "janeiro":
+                case "fevereiro":
+                    estacao = "Inverno";
+                    break;
+                default:
+                   alert("Mês inválido.");
+                    break;
+            }
+            break;
+
+        default:
+           alert("Hemisfério inválido.");
+            break;
+    }
+
+    if (estacao) {
+       alert(`Estação do ano: ${estacao}`);
+    }
+
 
 </script>
